@@ -16,7 +16,7 @@ a = a / b; // to swap value of b with a (Problem #3 Solved)
 let message; // declaring string variable
 //random = true; // cannot assign boolean value to string variable
 //random = 1;    // cannot assign number value to string variable (Problem #4 Solved)
-console.log("Remainder of two numbers using % operator:" + " " + (num1 % num2)); // using modulus operator to find the remainder of two numbers (Problem #5 Solved)
+console.log(`Remainder of ${num1} & ${num2} using % operator:  ${num1 % num2}`); // using modulus operator to find the remainder of two numbers (Problem #5 Solved)
 let counter = 0; // Declaring a variable
 counter += 1; // Incrementing the value by 1 
 counter++; // Incrementing the value by 1
