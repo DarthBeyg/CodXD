@@ -2,7 +2,7 @@
 let greeting; // Declared variable "greeting" with string value annotation 
 greeting = "Hello, World!"; // Initialized
 console.log(greeting); // Printing greeting (Problem #1 Solved)
-let num1 = 1;
+let num1 = 4;
 let num2 = 2;
 num1 + num2; // Calculating sum
 num1 - num2; // Calculating difference
@@ -13,10 +13,10 @@ let b = 2; // Defining variable "b"
 a = a * b; // to swap value of a with b
 b = a / b; // to swap value of b with a
 a = a / b; // to swap value of b with a (Problem #3 Solved)
-let random = "Alpha"; // creating string variable
+let message; // declaring string variable
 //random = true; // cannot assign boolean value to string variable
 //random = 1;    // cannot assign number value to string variable (Problem #4 Solved)
-console.log("Remainder of two numbers using % operator:" + " " + num1 % num2); // using modulus operator to find the remainder of two numbers (Problem #5 Solved)
+console.log("Remainder of two numbers using % operator:" + " " + (num1 % num2)); // using modulus operator to find the remainder of two numbers (Problem #5 Solved)
 let counter = 0; // Declaring a variable
 counter += 1; // Incrementing the value by 1 
 counter++; // Incrementing the value by 1
@@ -70,4 +70,37 @@ else if (y >= x && y >= z) {
 }
 else {
     console.log(`${z} is the greater number`); //Determining if z is the greater number
+} // Problem #12 solved
+let year = 2024; //leap year checker
+let leapYear = (year % 4 == 0) && (year % 100 != 0 || year % 400 == 0); // checking if the given year is divisible by 4 and not by 100, if it is then it must also be divisible by 400
+if (leapYear == true) {
+    console.log(`${year} is a leap year.`); // printing the determined result
 }
+else {
+    console.log(`${year} is not a leap year`); // printing the determined result
+} // Problem #13 solved
+let tempFahrenheit = 68; //declaring a variable for Fahrenheit value
+let tempCelsius; // declaring a variable for celsius value
+tempCelsius = (tempFahrenheit - 32) * 5 / 9; // fahrenheit to celsius conversion formula 
+console.log(`Temperature in celsius is ${tempCelsius}`); //Printing the result(Problem #14 solved)
+let numY = -450; //declaring a variable to check if a number is positive, negative or zero.
+if (numY > 0) { //condition for positive number
+    console.log(`${numY} is a positive number`);
+}
+else if (numY < 0) { //condition for negative number
+    console.log(`${numY} is a negative number`);
+}
+else { // If the number is 0
+    console.log("The number is 0.");
+} // Problem #15 solved
+let givenNumber = 1; //Multiplication table for any given number
+console.log(`${givenNumber} X 1 = ${givenNumber * 1}`);
+console.log(`${givenNumber} X 2 = ${givenNumber * 2}`);
+console.log(`${givenNumber} X 3 = ${givenNumber * 3}`);
+console.log(`${givenNumber} X 4 = ${givenNumber * 4}`);
+console.log(`${givenNumber} X 5 = ${givenNumber * 5}`);
+console.log(`${givenNumber} X 6 = ${givenNumber * 6}`);
+console.log(`${givenNumber} X 7 = ${givenNumber * 7}`);
+console.log(`${givenNumber} X 8 = ${givenNumber * 8}`);
+console.log(`${givenNumber} X 9 = ${givenNumber * 9}`);
+console.log(`${givenNumber} X 10 = ${givenNumber * 10}`); // Problem #16 solved.
