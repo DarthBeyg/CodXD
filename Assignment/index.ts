@@ -3,14 +3,14 @@ greeting = "Hello, World!"
 console.log(greeting); // problem 1
 let num1:number = 1;
 let num2:number = 2;
-console.log(`sum of ${num1} and ${num2} is: ${num1 + num2}`);
+console.log(`sum of ${num1} and ${num2} is: ${num1 + num2}`); // Arithmetic operator for addition
 num1 - num2;
 num1 * num2;
 num1 / num2; // problem 2
 let a = 1;
 let b = 2;
 a = a * b; //a=2
-b = a / b; // b=1
+b = a / b; // b=1 swapping the value of b with a 
 a = a / b; // a=2 problem #3
 let message:string;
 //message = 5; // compiling error cannot assign number value to string problem 4 
