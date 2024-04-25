@@ -16,6 +16,7 @@ greetWithParameters(`Ali`);
 function abc(){
     console.log(`This is abc function`)
     return 20;
+    console.log(`Aera ghera`)
 }
 const a = abc();
 console.log(" ~ a function ", a);
@@ -46,8 +47,11 @@ console.log(fruits);
 fruits.shift();
 console.log(fruits);
 const fruits1 = ['Apples', 'Oranges', 'Bananas','Apples1','Bananas1','Oranges1'];
-//3. Splice(adds) adds from a specific index  but also manipulates original array 
+//3. Splice adds and/or remove from a specific index  but also manipulates original array 
 fruits1.splice(1,0,'cherries');
 console.log(fruits1);
 fruits1.splice(1,6,'Watermelons');
 console.log(fruits1)
+//4. Slice "Selects" elements from specific index in an array but does not manipulate original array.
+const a1 = fruits1.slice(1);
+console.log(a1)
