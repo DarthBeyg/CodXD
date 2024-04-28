@@ -31,14 +31,14 @@ console.log(fruits);
 console.log(fruits[0]); console.log(fruits[1]);
 //Array methods
 //1. push(adds) add at the end
-fruits.push('Mangoes');
+const aa = fruits.push('Mangoes');
 console.log(fruits);
-
+console.log(aa) // fruits.push returns length of an array
 
 //2. Pop(deletes) deletes at the end
-fruits.pop();
+const bb = fruits.pop();
 console.log(fruits);
-
+console.log(bb) // fruits.pop returns the value deleted at the end of an array
 
 //3. Unshift(adds) adds at the start
 fruits.unshift('Cherries');

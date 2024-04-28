@@ -33,11 +33,13 @@ console.log(fruits[0]);
 console.log(fruits[1]);
 //Array methods
 //1. push(adds) add at the end
-fruits.push('Mangoes');
+const aa = fruits.push('Mangoes');
 console.log(fruits);
+console.log(aa);
 //2. Pop(deletes) deletes at the end
-fruits.pop();
+const bb = fruits.pop();
 console.log(fruits);
+console.log(bb);
 //3. Unshift(adds) adds at the start
 fruits.unshift('Cherries');
 console.log(fruits);
