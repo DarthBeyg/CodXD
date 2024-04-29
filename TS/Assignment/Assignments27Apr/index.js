@@ -39,3 +39,7 @@ for (i = 1; i <= 50; i++) {
     else
         console.log(i);
 }
+//Problem 8
+const temp = [5, 15, 10, 25, 40];
+const highTemp = Math.max(...temp);
+console.log(highTemp);
