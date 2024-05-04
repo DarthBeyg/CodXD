@@ -4,7 +4,7 @@
 // while loop // First checks condition then the loop is initiated
 // Above 2 are mostly not used in javascript
 // for loop
-// for (expression1 ; expression2, expression3){}
+// for (expression1 ; expression2; expression3){ body }
 // expres1 : starting condition
 // expres2 : ending condition
 // expres3 : manipulating starting condition so it's not an infinite loop
@@ -23,7 +23,7 @@ for (let x = 0; x < array.length; x++) {
 }
 function printTable(input) {
     for (let x = 1; x <= 10; x++) {
-        console.log(`${input} * ${x} = ${input * x}`);
+        console.log(`${input} X ${x} = ${input * x}`);
     }
 }
 printTable(2); // premitive & non premitive datatypes ko revisit kro
