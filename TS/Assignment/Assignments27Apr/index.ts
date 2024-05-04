@@ -21,10 +21,11 @@ if(num > 3){
 else console.log("NO")
                                    //Medium
 // Problem 6 Create a function "calculateArea" & find area of a circle
-function calculateArea(r : number){
-    console.log(`Area of the circle whose radius is ${r} is : ${3.14*r**2}`)
+function calculateArea(radius : number){
+    console.log(`Area of the circle whose radius is ${radius} is : ${3.14*radius**2}`)
 }
-calculateArea(2);
+let radius = 2;
+calculateArea(radius);
 // Problem 7 Write a loop that logs number 1 to 50
 let i;
 for(i = 1; i<=50; i++){
@@ -60,4 +61,16 @@ function positiveNumbers(num: number[]) {
 const count = positiveNumbers(testArray);
 console.log(`Positive numbers in the array : ${count}`);
                       //Arrays & Array methods.
-// Problem 11                       
+// Problem 11 Write a function that takes an array and returns a new array that start with the letter 'a'.                      
+function newArray(parameter: string[]) {
+    return parameter.filter( value => value.startsWith('a') || value.startsWith('A'));
+  }
+  
+  const oldArray = ['Ali', 'Umer', 'Abubakar', 'javed', 'abdullah'];
+  const wordsStartingWithA = newArray(oldArray);
+  console.log(wordsStartingWithA);
+// Problem 12 Create a script that logs the second to last element of an array named fruits.
+const fruits = ['Apple', 'Avocado', 'Banana', 'Grapes','Mangoes'];
+const newFruits =fruits.slice(1);// slice slices a new array from the original by given parameters 
+console.log(newFruits);
+// Problem 13 
