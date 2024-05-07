@@ -153,11 +153,17 @@ console.log("index of given element is:", indexOfElement(concatenatedArray, 40))
 // Problem 20 Write a function to find and return the smallest number in an array of integers.
 const integerArr = [24, 40, -15, 105];
 function smallestInteger(params) {
-    let smallest = params[0];
+    let smallest = params[0]; // assuming first value to be smallest value
     for (i = 1; i < params.length; i++) {
-        if (params[i] < smallest)
-            smallest = params[i];
+        if (params[i] < smallest) // checking every value against first value to findout which is smaller
+            smallest = params[i]; // updating smallest value
     }
     return smallest;
 }
 console.log(smallestInteger(integerArr));
+// Problem 21 Write a function calculateProduct that takes an array of numbers and returns the product of all elements.
+function productOfEveryElement(params) {
+    return params.reduce((Sum, param) => param * Sum, 1);
+}
+const product = productOfEveryElement(concatenatedArray);
+console.log(product);

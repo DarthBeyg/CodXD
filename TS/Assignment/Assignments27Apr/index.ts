@@ -159,3 +159,14 @@ function smallestInteger(params:number[]) {
     return smallest;
 }
 console.log(smallestInteger(integerArr));
+// Problem 21 Write a function calculateProduct that takes an array of numbers and returns the product of all elements.
+function productOfEveryElement(params:number[]) {
+    return params.reduce((Sum,param)=>param*Sum ,1) //reduce function used to find sum of every element 
+}
+const product = productOfEveryElement(concatenatedArray);
+console.log(product); 
+// Problem 22 Develop a function filterByLength that takes an array of strings and a number n. 
+const strArray = ["Aalo","dhania","piaaz","pudina","tamatar","mirch"];
+function filterByLength(array:string[],n:number):string[]{
+    return array.filter(str=>str.length>n)
+}
