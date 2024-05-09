@@ -163,7 +163,53 @@ function smallestInteger(params) {
 console.log(smallestInteger(integerArr));
 // Problem 21 Write a function calculateProduct that takes an array of numbers and returns the product of all elements.
 function productOfEveryElement(params) {
-    return params.reduce((Sum, param) => param * Sum, 1);
+    return params.reduce((Sum, param) => param * Sum, 1); //reduce function used to find sum of every element 
 }
 const product = productOfEveryElement(concatenatedArray);
 console.log(product);
+// Problem 22 Develop a function filterByLength that takes an array of strings and a number n. 
+const strArray = ["Aalo", "dhania", "piaaz", "pudina", "tamatar", "mirch"];
+function filterByLength(array, n) {
+    return array.filter(str => str.length > n); // filtering the array & applying length function to it's elements
+}
+console.log(filterByLength(strArray, 5));
+// Problem 23 Create a function findDuplicates that finds and logs all duplicates in an array.
+const testArr = [1, 2, 2, 3, 3, 3, 4, 5, 5]; //Declaring & initializing random array
+//  Pseudo Code
+// 1. see all the values in an array
+// 2. store the duplicate values in a set object
+// 3. Usage of set object which is basically un ordered list of unique values assigned to it.
+function findDuplicates(arr) {
+    const seen = new Set(); // set initiated
+    const duplicates = new Set();
+    arr.forEach((item) => {
+        if (seen.has(item)) { // if check set already has the value being checked
+            duplicates.add(item); // add to the duplicate set.
+        }
+        else {
+            seen.add(item); // else just check & ignore(check by adding value to check list (seen set))     
+        }
+    });
+    duplicates.forEach((duplicate) => {
+        console.log(duplicate);
+    });
+}
+findDuplicates(testArr);
+// Problem 24 Write a function incrementAll that takes an array of integers and increments each element by one.
+function incrementAll(arr) {
+    return arr.map(num => num + 1); // .map method used to manipulate array values and returning new array
+}
+const incremented = incrementAll(testArr);
+console.log(incremented);
+//Problem 25 Develop a function countOccurrences that counts how many times a specific element appears in an array.
+function countOccurances(arr, specNum) {
+    let count = 0;
+    for (num of arr) {
+        if (num === specNum) {
+            count++;
+        }
+    }
+    return count;
+}
+const countOf = countOccurances(testArr, 9);
+console.log(countOf);
