@@ -174,7 +174,7 @@ function filterByLength(array, n) {
 }
 console.log(filterByLength(strArray, 5));
 // Problem 23 Create a function findDuplicates that finds and logs all duplicates in an array.
-const testArr = [1, 2, 2, 3, 3, 3, 4, 5, 5]; //Declaring & initializing random array
+const testArr = [1, 2, 2, 3, 4, 3, 4, 5, 5]; //Declaring & initializing random array
 //  Pseudo Code
 // 1. see all the values in an array
 // 2. store the duplicate values in a set object
@@ -213,3 +213,42 @@ function countOccurances(arr, specNum) {
 }
 const countOf = countOccurances(testArr, 9);
 console.log(countOf);
+// Problem 26 Create a function isSorted that checks if an array is sorted in ascending order.
+function isSorted(array) {
+    for (i = 0; i < array.length - 1; i++) {
+        if (array[i] > array[i + 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(isSorted(testArr));
+// Problem 27 Write a function that formats an array into a string separated by commas
+const stringArray = ['John', 'Smith', 'Kate', 'Alice', 'Zach'];
+function formatArray(str) {
+    let lastNames = str.splice(-2); //Separating last two values for "and"
+    return `${str.join()},${lastNames.join(' and ')}`; //returning string value to function, using ".join"
+}
+console.log(formatArray(stringArray));
+// Problem 28  Convert an array of Fahrenheit temperatures to Celsius and logs the new temperatures.
+const tempFar = [90, 101, 56, 75, 82];
+function convertTemp(fahr) {
+    return fahr.map(far => Math.round((far - 32) * (5 / 9))); // simple conversion formula on each value of given array using .map and values returned
+}
+console.log(convertTemp(tempFar));
+// Problem 29 take an array of numbers and returns an object with properties for the min, max and avg of those numbers
+const numbersArray = [1, 2, 3, 4, 5];
+function minMaxAverage(numbers) {
+    let min = Math.min(...numbers); // ... for iteration of each value in array
+    let max = Math.max(...numbers); // ... for iteration of each value in array
+    let avg = numbers.reduce((a, b) => (a + b) / numbers.length, 0); // reduce function to add each value in each other
+    return { min, max, avg }; // returning object properties i.e keys and values
+}
+console.log(minMaxAverage(numbersArray));
+// Problem 30 Create a function swapElements that swaps two specified indices in an array.
+let swapArr = [1, 2, 3, 4];
+function swapElements(arr, index1, index2) {
+    [arr[index1], arr[index2]] = [arr[index2], arr[index1]]; // just simply swapping
+}
+swapElements(swapArr, 1, 2);
+console.log(swapArr);

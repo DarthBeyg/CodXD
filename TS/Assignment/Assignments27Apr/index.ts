@@ -1,18 +1,22 @@
                                   //Easy
 //Problem 1 write a script to log "Hello, World!"
 console.log(`Hello, World!`)
+
 // Problem 2 create a variable "temperature" then log if it's cold
 let temperature = 15;
 if(temperature<20){
     console.log(`It's cold!`)
 }
+
 // Problem 3 Use arithmetic operators to solve problem
 let appleCount = 10;
 console.log(`If I give away three apples i now have: ${appleCount - 3}`)
+
 // Problem 4 Declare two variables then third variable to log full name
 let firstName = 'Ali';
 let secondName = 'Bhai';
 let lastName = console.log(`${firstName}  ${secondName}`);
+
 // Problem 5 Comparison operator
 let num = 5;
 if(num > 3){
@@ -20,12 +24,14 @@ if(num > 3){
 }
 else console.log("NO")
                                    //Medium
+
 // Problem 6 Create a function "calculateArea" & find area of a circle
 function calculateArea(radius : number){
     console.log(`Area of the circle whose radius is ${radius} is : ${3.14*radius**2}`)
 }
 let radius = 2;
 calculateArea(radius);
+
 // Problem 7 Write a loop that logs number 1 to 50
 let i;
 for(i = 1; i<=50; i++){
@@ -37,16 +43,19 @@ for(i = 1; i<=50; i++){
     }
 else console.log(i);    
 }    
+
 //Problem 8 Find & log Highest temperature
 const temp = [5,15,10,25,40]
 const highTemp = Math.max(...temp) //"..." expands the several input of an array into individual values for math.max function to evaluate
 console.log("Highest temperature in degree celsius:",highTemp);
+
 // Problem 9 log minor or adult
 let age = 17;
 if(age>=18){
     console.log("You are an adult");
 }
 else console.log("You are a minor(under 18)");
+
 // Problem 10 write a function that returns count of positive numbers in an array
 const testArray  = [14,-5,25,0,15]
 function positiveNumbers(num: number[]) {
@@ -69,10 +78,12 @@ function newArray(parameter: string[]) {
   const oldArray = ['Ali', 'Umer', 'Abubakar', 'javed', 'abdullah'];
   const wordsStartingWithA = newArray(oldArray);
   console.log(wordsStartingWithA);
-// Problem 12 Create a script that logs the second to last element of an array named fruits.
+
+  // Problem 12 Create a script that logs the second to last element of an array named fruits.
 const fruits = ['Apple', 'Avocado', 'Banana', 'Grapes','Mangoes'];
 const newFruits =fruits.slice(1);// slice slices a new array from the original by given parameters 
 console.log(newFruits);
+
 // Problem 13 Develop a function that takes an array of numbers and returns a new array with each number squared.
 const firstArray = [0,15,2,4,11,1]
 function squaredArray(input: number[]){
@@ -80,6 +91,7 @@ function squaredArray(input: number[]){
 }
 const secondArray = squaredArray(firstArray);
 console.log(secondArray)
+
 // Problem 14 Reverse an array elements without using the .reverse() method.
 let orgArray = [1,2,3,4,5]
 function reverseArray(it:number[]){
@@ -91,6 +103,7 @@ function reverseArray(it:number[]){
 } 
 const aaa = reverseArray(orgArray);
 console.log(aaa);
+
 // Problem 15  write a function that logs the number of times the score exceeded maximum score & fell below the minimum score.
 const scores = [10,5,20,20,4,5,2,25];
 function maxOrminimum(pmt:number[]) {
@@ -113,6 +126,7 @@ function maxOrminimum(pmt:number[]) {
     
 }
 maxOrminimum(scores); 
+
 // Problem 16 Create a function that removes all falsey values from an array.
 const falseyValueArr = [NaN, "", 0, false, null, undefined, "Hello there!"] //Array with falsey values
 function removeFalseyValue(parameter: any[]){
@@ -120,10 +134,12 @@ function removeFalseyValue(parameter: any[]){
 }
 const notFalseyValueArray = removeFalseyValue(falseyValueArr); // storing the resultant array to a new array name
 console.log(notFalseyValueArray);
+
 // Problem 17 Concatenate two arrays
 const arr1 = [1,2,3]; const arr2 = [4,5,6] // defining two arrays
 const concatenatedArray = arr1.concat(arr2); // concat method
 console.log(concatenatedArray);
+
 // Problem 18 Develop a function called sumOfElements that calculates the sum of all elements in an array. either odd or even as an parameter
 function sumOfElements(parameter: number[], Type: "Even" | "Odd") {  // two parameters one an input value of array and other string
     return parameter.reduce((acc,curr) => {        //.reduce method used acc stands for accumulator & curr is current value treated
@@ -141,6 +157,7 @@ function sumOfElements(parameter: number[], Type: "Even" | "Odd") {  // two para
 }
 console.log("Sum of Even numbers of array:",sumOfElements(concatenatedArray,"Even"));
 console.log("Sum of Odd numbers of array:",sumOfElements(concatenatedArray,"Odd"));
+
 // Problem 19 Create a function that checks whether an element exists in an array. If it exists, return the index, otherwise return -1.
 function indexOfElement(params:number[], element : any) { // Two parameters taken, an array of values & specific value
     const index = params.indexOf(element); // index.of function called on specific element
@@ -148,6 +165,7 @@ function indexOfElement(params:number[], element : any) { // Two parameters take
 }
 console.log("index of given element is:",indexOfElement(concatenatedArray,4));
 console.log("index of given element is:",indexOfElement(concatenatedArray,40));
+
 // Problem 20 Write a function to find and return the smallest number in an array of integers.
 const integerArr = [24,40,-15,105];
 function smallestInteger(params:number[]) {
@@ -159,20 +177,23 @@ function smallestInteger(params:number[]) {
     return smallest;
 }
 console.log(smallestInteger(integerArr));
+
 // Problem 21 Write a function calculateProduct that takes an array of numbers and returns the product of all elements.
 function productOfEveryElement(params:number[]) {
     return params.reduce((Sum,param)=>param*Sum ,1) //reduce function used to find sum of every element 
 }
 const product = productOfEveryElement(concatenatedArray);
 console.log(product); 
+
 // Problem 22 Develop a function filterByLength that takes an array of strings and a number n. 
 const strArray = ["Aalo","dhania","piaaz","pudina","tamatar","mirch"];
 function filterByLength(array:string[],n:number):string[]{  // input of string values in an array & a number n
     return array.filter(str=>str.length>n)       // filtering the array & applying length function to it's elements
 }
 console.log(filterByLength(strArray,5));
+
 // Problem 23 Create a function findDuplicates that finds and logs all duplicates in an array.
-const testArr = [1,2,2,3,3,3,4,5,5]; //Declaring & initializing random array
+const testArr = [1,2,2,3,4,3,4,5,5]; //Declaring & initializing random array
 //  Pseudo Code
 // 1. see all the values in an array
 // 2. store the duplicate values in a set object
@@ -216,3 +237,49 @@ function countOccurances(arr : any[],specNum : any):number{
 }
 const countOf = countOccurances(testArr,9);
 console.log(countOf);
+
+// Problem 26 Create a function isSorted that checks if an array is sorted in ascending order.
+function isSorted(array:number[]):boolean{
+    for(i = 0;i < array.length - 1;i++){
+        if(array[i]>array[i+1]){
+            return false;
+        }      
+        }
+        return true;    
+}
+console.log(isSorted(testArr));
+
+// Problem 27 Write a function that formats an array into a string separated by commas
+const stringArray = ['John','Smith','Kate','Alice','Zach']
+function formatArray(str:string[]):string{            
+    let lastNames = str.splice(-2);    //Separating last two values for "and"
+    return `${str.join()},${lastNames.join(' and ')}` //returning string value to function, using ".join"
+}
+console.log(formatArray(stringArray));
+
+// Problem 28  Convert an array of Fahrenheit temperatures to Celsius and logs the new temperatures.
+const tempFar = [90,101,56,75,82];
+function convertTemp(fahr:number[]):number[]{
+    return fahr.map(far=> Math.round((far-32)*(5/9))); // simple conversion formula on each value of given array using .map and values returned
+}
+console.log(convertTemp(tempFar)); 
+
+// Problem 29 take an array of numbers and returns an object with properties for the min, max and avg of those numbers
+const numbersArray = [1,2,3,4,5];
+function minMaxAverage(numbers: number[]):{min: number, max: number, avg: number}{ //object properties
+    let min = Math.min(...numbers); // ... for iteration of each value in array
+    let max = Math.max(...numbers); // ... for iteration of each value in array
+    let avg = numbers.reduce((a,b)=>(a+b)/numbers.length,0); // reduce function to add each value in each other
+    return {min,max,avg}; // returning object properties i.e keys and values
+} 
+console.log(minMaxAverage(numbersArray));
+
+// Problem 30 Create a function swapElements that swaps two specified indices in an array.
+let swapArr = [1,2,3,4];
+function swapElements(arr:any[],index1: number,index2:number):void{ //input array,values of indices to swap, void function, no value returned
+    [arr[index1],arr[index2]] = [arr[index2],arr[index1]]; // just simply swapping
+}
+swapElements(swapArr,1,2); //call the function which manipulates the array
+console.log(swapArr);
+                                  //Hard
+// Problem 31 
