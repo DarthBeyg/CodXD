@@ -279,8 +279,9 @@ function logTasks(DoList) {
 }
 logTasks(toDoList);
 // Problem 33 Write a function that takes an array of integers and sorts them from smallest to largest.
-const arrOfInt = [4, 3, 5, 1, 2, 5, 6];
+const arrOfInt = [4, 3, 5, 1, 2, 5, 6]; // array of integers
 function sortAscendingOrder(params) {
-    return params.slice().sort((a, b) => a - b);
+    return params.sort((a, b) => a - b); //.slice() used so
 }
 console.log(sortAscendingOrder(arrOfInt));
+console.log(arrOfInt);
