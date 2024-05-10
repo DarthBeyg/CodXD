@@ -241,7 +241,7 @@ const numbersArray = [1, 2, 3, 4, 5];
 function minMaxAverage(numbers) {
     let min = Math.min(...numbers); // ... for iteration of each value in array
     let max = Math.max(...numbers); // ... for iteration of each value in array
-    let avg = numbers.reduce((a, b) => (a + b) / numbers.length, 0); // reduce function to add each value in each other
+    let avg = numbers.reduce((a, b) => a + b / numbers.length, 0); // reduce function to add each value in each other
     return { min, max, avg }; // returning object properties i.e keys and values
 }
 console.log(minMaxAverage(numbersArray));
@@ -250,5 +250,37 @@ let swapArr = [1, 2, 3, 4];
 function swapElements(arr, index1, index2) {
     [arr[index1], arr[index2]] = [arr[index2], arr[index1]]; // just simply swapping
 }
-swapElements(swapArr, 1, 2);
+swapElements(swapArr, 1, 2); //call the function which manipulates the array
 console.log(swapArr);
+//Hard
+// Problem 31 Develop a function that takes two inputs, a string and a character, and returns the number of times the character appears
+const testString = 'Hello world!';
+function countCharacter(string, character) {
+    let count = 0; //initializing count at 0
+    for (i = 0; i < string.length; i++) { //for loop for index to run at 0
+        if (string.charAt(i) === character) { // using .charAt() to read a character at specific index
+            count++; // counting
+        }
+    }
+    return count; // returning the count of the specific characters appearance to function
+}
+console.log(countCharacter(testString, '!'));
+const toDoList = [
+    { task: 'Turn up at the event', completed: true }, //self explaining. key and value are stored
+    { task: "Drive your car to the hotel", completed: false },
+    { task: "Water the flowers", completed: false }
+];
+function logTasks(DoList) {
+    DoList.forEach(item => {
+        if (!item.completed) { // .completed method boolean value checking method applied & not operator applied so it goes further only if false value 
+            console.log(`Tasks yet to be completed: ${item.task}`); // respective key attached to false value shown using dot method
+        }
+    });
+}
+logTasks(toDoList);
+// Problem 33 Write a function that takes an array of integers and sorts them from smallest to largest.
+const arrOfInt = [4, 3, 5, 1, 2, 5, 6];
+function sortAscendingOrder(params) {
+    return params.slice().sort((a, b) => a - b);
+}
+console.log(sortAscendingOrder(arrOfInt));
