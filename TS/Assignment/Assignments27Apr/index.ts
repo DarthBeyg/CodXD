@@ -94,8 +94,8 @@ console.log(secondArray)
 
 // Problem 14 Reverse an array elements without using the .reverse() method.
 let orgArray = [1,2,3,4,5]
-function reverseArray(it:number[]){
-    let reversed = []; // defining empty array to store value
+function reverseArray(it: any[]){
+    const reversed = []; // defining empty array to store value
     for(i = it.length - 1;i >= 0; i--){  // backward loop
         reversed.push(it[i]); // indexing last element of original array
     }
@@ -321,3 +321,40 @@ function sortAscendingOrder(params:number[]):number[] {
 }                                       // .sort with it's arrow function syntax enforces ascending order a - b means exactly that
 console.log(sortAscendingOrder(arrOfInt));
 console.log(arrOfInt);
+
+// Problem 34 Develop a TypeScript program that logs every element of an array in reverse order without using the .reverse() method.
+const arrX = [1,2,3,4,5];        // same as problem 14 very little difference
+function arrayReversed(arr: any[]): void {        // returning void as this function just executes code without returning a value
+    for (let i = arr.length - 1; i >= 0; i--) {
+        console.log(arr[i]);  // directly logging in reverse order as per problem discription. 
+    }                        // In problem 14 it was asked to reverse an array without .reverse(), so it was done accordingly
+}
+arrayReversed(arrX);
+
+// Problem 35 Write a script that simulates a basic calculator. It should take two operands and an operator ('+', '-', '*', '/')
+function calc(operand1:number,operand2:number,arOper:string):any{ // operand1,2 & arithmetic operator being parameters to function
+    switch(arOper){ //Switch statment. it evaluates the value of "arOper" and executes accordingly
+        case '+':
+            return operand1 + operand2;
+        case '-':
+            return operand1 - operand2;
+        case '*':
+            return operand1 * operand2;
+        case '/':
+            if(operand2 !== 0){
+                return operand1 / operand2; // division will only work if user is not dividing a number by "0"
+            }
+            else{
+                return "Error: Can't divide by Zero!"     // not divisible by "0"
+            }
+        default:
+            return "Error: Arithmetic Operator not recognized!" // if wrong input is entered in arOper, this error emerges    
+                   
+    }
+}
+const operand1 = 15;
+const operand2 = 20;
+const operator = '*';
+const calculated = calc(operand1,operand2,operator);
+console.log(calculated);
+
