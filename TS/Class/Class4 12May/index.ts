@@ -1,4 +1,4 @@
-let person = {
+let person = {           // here person is an object and name,age,gender,isUser are its properties.
     name: "John",
     age: 25,
     gender: "male",
