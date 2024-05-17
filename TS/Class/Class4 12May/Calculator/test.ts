@@ -1,7 +1,7 @@
-#! /usr/bin/env node // Shebang command line for linux and macOS(unix based systems) to tell them to run this script as Node.js script.
-import inquirer from "inquirer";                                        //  this will make it executionable directly from command line. 
- const questions = await inquirer.prompt([{
-    type: "input",
+#! /usr/bin/env node // Shebang command line for linux and macOS(unix based systems) to tell them to run this script as Node.js script. 
+import inquirer from "inquirer";                            // this will make it executionable directly from command line.           
+ const questions = await inquirer.prompt([{          //shebang 
+    type: "input",  
     name: "num1",
     message: "Enter first number",
  },
@@ -18,27 +18,23 @@ import inquirer from "inquirer";                                        //  this
  },
 ]);
 function sum(num1:number, num2:number) {
-    const result = num1 + num2;
-    console.log(result);
+    return Number(num1) + Number(num2);
 }
 function difference(num1:number, num2:number) {
-    const result = num1 - num2;
-    console.log(result);
+    return num1 - num2;
 }
 function product(num1:number, num2:number) {
     const result = num1 * num2;
     console.log(result);
 }
 function division(num1:number, num2:number) {
-    //const result = num1 / num2;
-    //console.log(result);
     return num1 / num2;
 }
 if (questions.operator == "+"){
     console.log("Sum of two given numbers:",sum(questions.num1,questions.num2));
 }
 else if(questions.operator == "-"){
-    console.log("Difference of two given numbers:",difference(questions.num1,questions.num1));
+    console.log("Difference of two given numbers:",difference(questions.num1,questions.num2));
 }
 else if(questions.operator == "*"){
     console.log("Product of two given numbers:",product(questions.num1,questions.num2))
