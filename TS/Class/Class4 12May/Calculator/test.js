@@ -24,8 +24,7 @@ function difference(num1, num2) {
     return num1 - num2;
 }
 function product(num1, num2) {
-    const result = num1 * num2;
-    console.log(result);
+    return num1 * num2;
 }
 function division(num1, num2) {
     return num1 / num2;
