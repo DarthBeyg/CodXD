@@ -1,5 +1,5 @@
-#! /usr/bin/env node // Shebang command line for linux and macOS(unix based systems) to tell them to run this script as Node.js script. this will make it executionable directly from command line. 
-import inquirer from "inquirer";
+#! /usr/bin/env node // Shebang command line for linux and macOS(unix based systems) to tell them to run this script as Node.js script. 
+import inquirer from "inquirer"; // this will make it executionable directly from command line.           
 const questions = await inquirer.prompt([{
         type: "input",
         name: "num1",
