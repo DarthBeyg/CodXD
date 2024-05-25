@@ -1,8 +1,9 @@
             // Union literals 
 let myname: string | null | number;   // myname could be a string or null or number.
-
+myname = "5";
+myname = 5;
 myname = null;
-            
+//myname = undefined  error           
 console.log(myname);
             
 myname = "zia";      
@@ -33,8 +34,8 @@ console.log(myAge.toString()); // common to both types
 console.log(myAge.toLowerCase()); //Can be called on string
                                   //because of narrowing         
 
-let newAge = Math.random() > 0.6 ? "KHan":              // this syntax is called "terinary statement"
-             Math.random() < 0.6 ? "KHAN": 60;          // it is short way of using if else type condition  
+let newAge = Math.random() > 0.6 ? "Khan":              // this syntax is called "terinary statement"
+             Math.random() < 0.6 ? "Pathan": 60;          // it is short way of using if else type condition  
 console.log(newAge); 
 //newAge.toLowerCase();//Error: Transpiler cannot narrow
 
@@ -55,7 +56,7 @@ Status = "passOut";
 //Status = "died";
 Status = "Active";
   
-age = 125361272167310; //OK
+age = 1253612167310; //OK
 age = "died"; //OK
 age = "unknown"; //OK
 //age = "living"; //Error
@@ -79,6 +80,7 @@ age = "unknown"; //OK
   type RawData = boolean | number | string | null | undefined; //Example of Union Type
   
   let data: RawData;
+  
   
   // You can even combine them
   
@@ -157,13 +159,13 @@ let teacher2: Teacher = {
 };
 
 let teacher3: Teacher = {
-  name: "Jahanzaib",
-  exp: 4,
+  name: "Zeeshan",
+  exp: 5,
 };
 
 let teacher4: Teacher = {
-  name: "Jahanzaib",
-  exp: 4,
+  name: "Hira Khan",
+  exp: 10,
 };
 
 type Student = {
@@ -177,7 +179,7 @@ let studentA: Student = {
 };
 
 let student2: Student = {
-  name: "Hira",
+  name: "Jhanzeb",
 };
 
 console.log(student["name"]);
@@ -195,11 +197,13 @@ let storeManager: Manager = {
   name: "Bilal",
   subordiates: 40,
 };
-/*Extending: Interfaces can be extended using the extends keyword,
- whereas type aliases for objects can be combined using intersections. It can also redclare itself to add another property*/
+//Extending: Interfaces can be extended using the extends keyword,
+ //whereas type aliases for objects can be combined using intersections. It can also redclare itself to add another property*/
 interface Permission extends Manager {
   permissions: string;
 }
+
+
 let generalManager: Permission = {
   name: "Hassan",
   subordiates: 15,

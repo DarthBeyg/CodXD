@@ -1,7 +1,10 @@
 "use strict";
 // Union literals 
 let myname; // myname could be a string or null or number.
+myname = "5";
+myname = 5;
 myname = null;
+//myname = undefined  error           
 console.log(myname);
 myname = "zia";
 console.log(myname);
@@ -25,8 +28,8 @@ console.log(myAge.toString()); // common to both types
 //can be called even without narrowing
 console.log(myAge.toLowerCase()); //Can be called on string
 //because of narrowing         
-let newAge = Math.random() > 0.6 ? "KHan" : // this syntax is called "terinary statement"
-    Math.random() < 0.6 ? "KHAN" : 60; // it is short way of using if else type condition  
+let newAge = Math.random() > 0.6 ? "Khan" : // this syntax is called "terinary statement"
+    Math.random() < 0.6 ? "Pathan" : 60; // it is short way of using if else type condition  
 console.log(newAge);
 //newAge.toLowerCase();//Error: Transpiler cannot narrow
 if (typeof newAge === "string") {
@@ -161,7 +164,14 @@ let person = {
     name: "Mary",
     age: 30,
     greet: function () {
-        console.log("Hello, my name is " + name);
+        console.log("Hello, my name is " + this.name);
     }
 };
-person.greet();
+let obj1 = {
+    student_id: 3232,
+    student_name: "rita",
+    teacher_Id: 7873,
+    teacher_name: "seema",
+};
+console.log(obj1.teacher_Id);
+console.log(obj1.student_name);
