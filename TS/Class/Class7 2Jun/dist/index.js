@@ -84,7 +84,7 @@ function buildNameX(firstName, lastName = "Khan") {
     return firstName + " " + lastName;
 }
 let result1X = buildNameX("Bob"); //works correctly because last parameter is optional
-console.log("🚀 ~ result1:", result1);
+console.log("🚀 ~ result1X:", result1X);
 //let result2X = buildNameX("Bob", "Adams", "Sr."); //error, too many parameters
 let result3X = buildNameX("Bob", "Adams"); //correct
 console.log("🚀 ~ result3:", result3X);
@@ -96,9 +96,8 @@ let buildName1X = function (firstName, lastName = "Khan") {
     else
         return firstName;
 };
-const buildName3X = (firstName, lastName = "Khan") => {
-    return `${firstName} ${lastName}`;
-};
+let resultXY = buildName1X("John", "Kirby");
+console.log(resultXY);
 //step09d_function_rest_parameter
 function buildNameY(firstName, 
 // name?: string,
@@ -108,7 +107,7 @@ lastName,
 ...restOfName) {
     console.log("🚀 ~ lastName:", lastName);
     //Named function with Rest parameters
-    return firstName + " " + restOfName.join(" ");
+    return firstName + " " + lastName + " " + restOfName.join(" ");
 }
 const employeeName = buildNameY("A", "b", "c", "d");
 console.log("🚀 ~ employeeName:", employeeName);
@@ -135,7 +134,8 @@ let student = {
     age5: 60,
 };
 console.log("🚀 ~ student:", student);
-// const age = student.age;
+const ageX = student.age;
+console.log(ageX);
 // object destructed
 const { age, name } = student;
 //object update

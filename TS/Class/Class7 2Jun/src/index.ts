@@ -105,7 +105,7 @@ function buildNameX(firstName: string, lastName = "Khan"): string {
 }
 
 let result1X = buildNameX("Bob"); //works correctly because last parameter is optional
-console.log("🚀 ~ result1:", result1);
+console.log("🚀 ~ result1X:", result1X);
 
 //let result2X = buildNameX("Bob", "Adams", "Sr."); //error, too many parameters
 let result3X = buildNameX("Bob", "Adams"); //correct
@@ -121,9 +121,8 @@ let buildName1X: (firstName: string, lastName?: string) => string = function (
   else return firstName;
 };
 
-const buildName3X = (firstName: string, lastName = "Khan") => {
-  return `${firstName} ${lastName}`;
-};                                  
+let resultXY = buildName1X("John","Kirby")
+console.log(resultXY)                                  
                                                  //step09d_function_rest_parameter
 function buildNameY(
   firstName: string,
@@ -135,7 +134,7 @@ function buildNameY(
 ) {
   console.log("🚀 ~ lastName:", lastName);
   //Named function with Rest parameters
-  return firstName + " " + restOfName.join(" ");
+  return firstName + " " + lastName + " " + restOfName.join(" ");
 }
 
 const employeeName = buildNameY("A","b","c","d");
@@ -183,7 +182,8 @@ let student = {
 
 console.log("🚀 ~ student:", student);
 
-// const age = student.age;
+const ageX = student.age;
+console.log(ageX)
 
 // object destructed
 
@@ -217,6 +217,7 @@ function overload(arg1: string, arg2: string): string; //option 1
 function overload(arg1: number, arg2: number): number; //option 2
 function overload(arg1: boolean, arg2: boolean): boolean; //option 3
 function overload(arg1: number, arg2: string): boolean; //option 3
+
 // //this is not part of the overload list,
 // //so it has only three overloads
 function overload(arg1: any, arg2: any): any {
