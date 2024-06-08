@@ -19,7 +19,7 @@ interface Sphere {
   }
   
 let ball: Ball = { diameter: 10 };
-let sphere: Sphere = { diameter: 20, };
+let sphere: Sphere = { diameter: 20 };
 // These two interfaces are completely transferrable in a structural type system and are totally compatible
 ball = sphere
 sphere = ball
@@ -55,7 +55,7 @@ myType = { id: 2, name: "Tom" };
 
 var x: { id: number; [a: string]: any }; //Note now 'x' can have any name, just that the property should be of type string
 
-x = { id: 1, fullname: "Zia", }; // Ok, `fullname` matched by index signature
+x = { id: 1, fullname: "Zia" }; // Ok, `fullname` matched by index signature
 
 console.log("🚀 ~ x:", x);
 x = { id: 2, fullname: "Zia Khan", lastName: "Khan", isUser: true };// index signature can be repetitive
@@ -80,7 +80,7 @@ var x: { id: number; [x: string]: any }; //Note now 'x' can have any name, just 
 var y = { id: 1, fullname: "Zia" };
 x = y; // Ok, `fullname` matched by index signature
 
-var myType4 = { id: 2, name: "Tom", age: 22 };
+var myType4 = { id: 20, name: "Tom", age: 22 };
 //Case 3
 myType = myType4; //Case 3: Ok, excess property allowed in case of stale object which is different from fresh object
 var x1: { foo: number };
@@ -142,8 +142,10 @@ const val2: any = val; // OK
 // const val6: Record<string, any> = val; // Will throw error
 // const val7: any[] = val; // Will throw error
 // const val8: (...args: any[]) => void = val; // Will throw error                                                   
-     // Never
-function abc() {}
+               // Never
+function abc() {
+
+}
 
 // Function returning never must not have a reachable end point
 function error(message: string): never {
@@ -169,6 +171,7 @@ console.log(myname);
 console.log(typeof myname);
 
 let xy: unknown = "hello";
+//console.log(xy.length)
 console.log((xy  as string).length);
 //myname as number;
 myname = 6; // narrowing
@@ -208,20 +211,20 @@ enum StudentStatus {
 let student = {
   id: 1,
   name: "Zaib",
-  status: StudentStatus.Active,
+  status: StudentStatus.Inactive,
 };
 
-if (student.status === StudentStatus.Active) {
-} else if (student.status === StudentStatus.Inactive) {
+if (student.status === StudentStatus.Active) { //false
+} else if (student.status === StudentStatus.Inactive) {//true
 }
 let c: Color = Color.Green;
-//c = "67";
+//c = 1
 console.log("🚀 ~ c:", c);
 
 enum Color1 {
   Red = 100,
-  Green,
-  Blue,
+  Green,//101
+  Blue,//102
 }
 // enum declare without const // [value] => key
 let colorName: string = Color1[102];
@@ -242,12 +245,12 @@ const enum ColorA {
 } //starts with 0
 var col: ColorA = ColorA.Green;
 
-const enum ColorB {
+ const enum ColorB {
   Red = "fdsygchjklwdfghvwejbkfdn,ewjghvfbm",
-  Green = 67,
+  Green = 2,
   Blue = "null",
 }
-//var colorName: string = ColorB[2]; //Not allowed with const enums
+//var colorName1: string = ColorB[2]; //Not allowed with const enums
 //console.log(colorName);
 
 const enum ColorC {
@@ -265,13 +268,12 @@ let array3: number[] = []; //correct syntax to define an empty array
 
 //let array4: number[] = new number[2](); //error
 
-let array5: number[] = [];
+let array5: number[] = []; 
 array5.push(1234); //dynamically adding
 
-const array6: number[][] | string[][] = [
+const array6: (number|string)[][] | string[][] = [
   [12, 34, 5],
-  [23, 56, 7],
-];
+  [23, 56, 7],["a","be"]];
 
 const rsqtye = [5, "6", 56];
 const array644r: number[][] | string[][] = [

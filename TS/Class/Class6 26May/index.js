@@ -7,7 +7,7 @@ let person = {
     moto: "you can't see me!"
 };
 let ball = { diameter: 10 };
-let sphere = { diameter: 20, };
+let sphere = { diameter: 20 };
 // These two interfaces are completely transferrable in a structural type system and are totally compatible
 ball = sphere;
 sphere = ball;
@@ -29,7 +29,7 @@ myType = { id: 2, name: "Tom" };
 //Case 2b
 //A type can include an index signature to explicitly indicate that excess properties are permitted in with fresh objects:
 var x; //Note now 'x' can have any name, just that the property should be of type string
-x = { id: 1, fullname: "Zia", }; // Ok, `fullname` matched by index signature
+x = { id: 1, fullname: "Zia" }; // Ok, `fullname` matched by index signature
 console.log("🚀 ~ x:", x);
 x = { id: 2, fullname: "Zia Khan", lastName: "Khan", isUser: true }; // index signature can be repetitive
 console.log("🚀 ~ x:", x);
@@ -48,7 +48,7 @@ let myType3 = { id: 2, name_person: "Tom" };
 var x; //Note now 'x' can have any name, just that the property should be of type string
 var y = { id: 1, fullname: "Zia" };
 x = y; // Ok, `fullname` matched by index signature
-var myType4 = { id: 2, name: "Tom", age: 22 };
+var myType4 = { id: 20, name: "Tom", age: 22 };
 //Case 3
 myType = myType4; //Case 3: Ok, excess property allowed in case of stale object which is different from fresh object
 var x1;
@@ -101,7 +101,8 @@ const val2 = val; // OK
 // const val7: any[] = val; // Will throw error
 // const val8: (...args: any[]) => void = val; // Will throw error                                                   
 // Never
-function abc() { }
+function abc() {
+}
 // Function returning never must not have a reachable end point
 function error(message) {
     throw new Error(message);
@@ -194,7 +195,7 @@ let array3 = []; //correct syntax to define an empty array
 let array5 = [];
 array5.push(1234); //dynamically adding
 const array6 = [
-    [12, 34, 6],
+    [12, 34, 5],
     [23, 56, 7],
 ];
 const rsqtye = [5, "6", 56];
